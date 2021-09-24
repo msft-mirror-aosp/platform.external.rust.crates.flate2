@@ -41,6 +41,8 @@ rust_library {
     name: "libflate2",
     host_supported: true,
     crate_name: "flate2",
+    cargo_env_compat: true,
+    cargo_pkg_version: "1.0.22",
     srcs: ["src/lib.rs"],
     edition: "2018",
     features: [
