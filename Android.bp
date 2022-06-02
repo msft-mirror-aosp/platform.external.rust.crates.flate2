@@ -37,6 +37,101 @@ license {
     ],
 }
 
+rust_test {
+    name: "flate2_test_src_lib",
+    host_supported: true,
+    crate_name: "flate2",
+    cargo_env_compat: true,
+    cargo_pkg_version: "1.0.24",
+    srcs: ["src/lib.rs"],
+    test_suites: ["general-tests"],
+    auto_gen_config: true,
+    test_options: {
+        unit_test: true,
+    },
+    edition: "2018",
+    features: [
+        "any_zlib",
+        "libz-sys",
+        "zlib",
+    ],
+    rustlibs: [
+        "libcrc32fast",
+        "liblibz_sys",
+        "libquickcheck",
+        "librand",
+    ],
+}
+
+rust_defaults {
+    name: "flate2_test_defaults",
+    crate_name: "flate2",
+    cargo_env_compat: true,
+    cargo_pkg_version: "1.0.24",
+    test_suites: ["general-tests"],
+    auto_gen_config: true,
+    edition: "2018",
+    features: [
+        "any_zlib",
+        "libz-sys",
+        "zlib",
+    ],
+    rustlibs: [
+        "libcrc32fast",
+        "libflate2",
+        "liblibz_sys",
+        "libquickcheck",
+        "librand",
+    ],
+}
+
+rust_test {
+    name: "flate2_test_tests_early-flush",
+    defaults: ["flate2_test_defaults"],
+    host_supported: true,
+    srcs: ["tests/early-flush.rs"],
+    test_options: {
+        unit_test: true,
+    },
+}
+
+rust_test {
+    name: "flate2_test_tests_empty-read",
+    defaults: ["flate2_test_defaults"],
+    host_supported: true,
+    srcs: ["tests/empty-read.rs"],
+    test_options: {
+        unit_test: true,
+    },
+}
+
+rust_test {
+    name: "flate2_test_tests_gunzip",
+    defaults: ["flate2_test_defaults"],
+    host_supported: true,
+    srcs: ["tests/gunzip.rs"],
+    test_options: {
+        unit_test: true,
+    },
+    data: [
+        "tests/corrupt-gz-file.bin",
+        "tests/good-file.gz",
+        "tests/good-file.txt",
+        "tests/multi.gz",
+        "tests/multi.txt",
+    ],
+}
+
+rust_test {
+    name: "flate2_test_tests_zero-write",
+    defaults: ["flate2_test_defaults"],
+    host_supported: true,
+    srcs: ["tests/zero-write.rs"],
+    test_options: {
+        unit_test: true,
+    },
+}
+
 rust_library {
     name: "libflate2",
     host_supported: true,
