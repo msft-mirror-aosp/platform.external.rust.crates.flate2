@@ -5,13 +5,5 @@
   ],
   "device": true,
   "features": "zlib",
-  "run": true,
-  "tests": true,
-  "test-data": [
-    "tests/gunzip.rs=tests/corrupt-gz-file.bin",
-    "tests/gunzip.rs=tests/good-file.gz",
-    "tests/gunzip.rs=tests/good-file.txt",
-    "tests/gunzip.rs=tests/multi.gz",
-    "tests/gunzip.rs=tests/multi.txt"
-  ]
+  "run": true
 }
