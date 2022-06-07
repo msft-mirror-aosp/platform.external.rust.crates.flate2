@@ -42,7 +42,7 @@ rust_library {
     host_supported: true,
     crate_name: "flate2",
     cargo_env_compat: true,
-    cargo_pkg_version: "1.0.22",
+    cargo_pkg_version: "1.0.24",
     srcs: ["src/lib.rs"],
     edition: "2018",
     features: [
@@ -51,9 +51,7 @@ rust_library {
         "zlib",
     ],
     rustlibs: [
-        "libcfg_if",
         "libcrc32fast",
-        "liblibc",
         "liblibz_sys",
     ],
     apex_available: [
