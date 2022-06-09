@@ -5,6 +5,21 @@
       "name": "ZipFuseTest"
     },
     {
+      "name": "flate2_test_src_lib"
+    },
+    {
+      "name": "flate2_test_tests_early-flush"
+    },
+    {
+      "name": "flate2_test_tests_empty-read"
+    },
+    {
+      "name": "flate2_test_tests_gunzip"
+    },
+    {
+      "name": "flate2_test_tests_zero-write"
+    },
+    {
       "name": "libapexutil_rust.test"
     },
     {
@@ -25,6 +40,21 @@
       "name": "ZipFuseTest"
     },
     {
+      "name": "flate2_test_src_lib"
+    },
+    {
+      "name": "flate2_test_tests_early-flush"
+    },
+    {
+      "name": "flate2_test_tests_empty-read"
+    },
+    {
+      "name": "flate2_test_tests_gunzip"
+    },
+    {
+      "name": "flate2_test_tests_zero-write"
+    },
+    {
       "name": "libapexutil_rust.test"
     },
     {
@@ -43,6 +73,21 @@
   "presubmit-rust": [
     {
       "name": "ZipFuseTest"
+    },
+    {
+      "name": "flate2_test_src_lib"
+    },
+    {
+      "name": "flate2_test_tests_early-flush"
+    },
+    {
+      "name": "flate2_test_tests_empty-read"
+    },
+    {
+      "name": "flate2_test_tests_gunzip"
+    },
+    {
+      "name": "flate2_test_tests_zero-write"
     },
     {
       "name": "libapexutil_rust.test"
