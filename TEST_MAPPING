@@ -5,10 +5,34 @@
       "name": "ZipFuseTest"
     },
     {
+      "name": "flate2_test_src_lib"
+    },
+    {
+      "name": "flate2_test_tests_early-flush"
+    },
+    {
+      "name": "flate2_test_tests_empty-read"
+    },
+    {
+      "name": "flate2_test_tests_gunzip"
+    },
+    {
+      "name": "flate2_test_tests_zero-write"
+    },
+    {
+      "name": "apkdmverity.test"
+    },
+    {
+      "name": "libapexutil_rust.test"
+    },
+    {
       "name": "libapkverify.integration_test"
     },
     {
       "name": "libapkverify.test"
+    },
+    {
+      "name": "libidsig.test"
     },
     {
       "name": "microdroid_manager_test"
@@ -22,10 +46,34 @@
       "name": "ZipFuseTest"
     },
     {
+      "name": "flate2_test_src_lib"
+    },
+    {
+      "name": "flate2_test_tests_early-flush"
+    },
+    {
+      "name": "flate2_test_tests_empty-read"
+    },
+    {
+      "name": "flate2_test_tests_gunzip"
+    },
+    {
+      "name": "flate2_test_tests_zero-write"
+    },
+    {
+      "name": "apkdmverity.test"
+    },
+    {
+      "name": "libapexutil_rust.test"
+    },
+    {
       "name": "libapkverify.integration_test"
     },
     {
       "name": "libapkverify.test"
+    },
+    {
+      "name": "libidsig.test"
     },
     {
       "name": "microdroid_manager_test"
