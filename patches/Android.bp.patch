@@ -1,44 +1,42 @@
-diff --git a/Android.bp b/Android.bp
-index 0d89ca8..d52dddd 100644
---- a/Android.bp
-+++ b/Android.bp
-@@ -39,7 +39,6 @@ license {
+--- Android.bp	2023-11-10 17:11:23.235848680 +0000
++++ Android.bp.new	2023-11-10 17:11:11.483678524 +0000
+@@ -39,7 +39,6 @@
  
  rust_test {
      name: "flate2_test_src_lib",
 -    host_supported: true,
      crate_name: "flate2",
      cargo_env_compat: true,
-     cargo_pkg_version: "1.0.24",
-@@ -88,7 +87,6 @@ rust_defaults {
+     cargo_pkg_version: "1.0.25",
+@@ -65,7 +64,6 @@
+ 
  rust_test {
      name: "flate2_test_tests_early-flush",
-     defaults: ["flate2_test_defaults"],
 -    host_supported: true,
-     srcs: ["tests/early-flush.rs"],
-     test_options: {
-         unit_test: true,
-@@ -98,7 +96,6 @@ rust_test {
+     crate_name: "early_flush",
+     cargo_env_compat: true,
+     cargo_pkg_version: "1.0.25",
+@@ -92,7 +90,6 @@
+ 
  rust_test {
      name: "flate2_test_tests_empty-read",
-     defaults: ["flate2_test_defaults"],
 -    host_supported: true,
-     srcs: ["tests/empty-read.rs"],
-     test_options: {
-         unit_test: true,
-@@ -108,7 +105,6 @@ rust_test {
+     crate_name: "empty_read",
+     cargo_env_compat: true,
+     cargo_pkg_version: "1.0.25",
+@@ -119,7 +116,6 @@
+ 
  rust_test {
      name: "flate2_test_tests_gunzip",
-     defaults: ["flate2_test_defaults"],
 -    host_supported: true,
-     srcs: ["tests/gunzip.rs"],
-     test_options: {
-         unit_test: true,
-@@ -125,7 +121,6 @@ rust_test {
+     crate_name: "gunzip",
+     cargo_env_compat: true,
+     cargo_pkg_version: "1.0.25",
+@@ -153,7 +149,6 @@
+ 
  rust_test {
      name: "flate2_test_tests_zero-write",
-     defaults: ["flate2_test_defaults"],
 -    host_supported: true,
-     srcs: ["tests/zero-write.rs"],
-     test_options: {
-         unit_test: true,
+     crate_name: "zero_write",
+     cargo_env_compat: true,
+     cargo_pkg_version: "1.0.25",
