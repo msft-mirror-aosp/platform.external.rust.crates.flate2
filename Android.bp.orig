@@ -39,6 +39,7 @@ license {
 
 rust_test {
     name: "flate2_test_src_lib",
+    host_supported: true,
     crate_name: "flate2",
     cargo_env_compat: true,
     cargo_pkg_version: "1.0.28",
@@ -65,6 +66,7 @@ rust_test {
 
 rust_test {
     name: "flate2_test_tests_early-flush",
+    host_supported: true,
     crate_name: "early_flush",
     cargo_env_compat: true,
     cargo_pkg_version: "1.0.28",
@@ -92,6 +94,7 @@ rust_test {
 
 rust_test {
     name: "flate2_test_tests_empty-read",
+    host_supported: true,
     crate_name: "empty_read",
     cargo_env_compat: true,
     cargo_pkg_version: "1.0.28",
@@ -119,6 +122,7 @@ rust_test {
 
 rust_test {
     name: "flate2_test_tests_gunzip",
+    host_supported: true,
     crate_name: "gunzip",
     cargo_env_compat: true,
     cargo_pkg_version: "1.0.28",
@@ -153,6 +157,7 @@ rust_test {
 
 rust_test {
     name: "flate2_test_tests_zero-write",
+    host_supported: true,
     crate_name: "zero_write",
     cargo_env_compat: true,
     cargo_pkg_version: "1.0.28",
