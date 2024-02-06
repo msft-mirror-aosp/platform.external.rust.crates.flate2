@@ -23,13 +23,13 @@ jobs:
             os: macos-latest
             rust: stable
           - build: windows
-            os: windows-2019
+            os: windows-2022
             rust: stable
           - build: mingw
-            os: windows-2019
+            os: windows-2022
             rust: stable-x86_64-gnu
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v3
     - name: Install Rust (rustup)
       run: rustup update ${{ matrix.rust }} --no-self-update && rustup default ${{ matrix.rust }}
       shell: bash
@@ -38,18 +38,25 @@ jobs:
     - run: cargo test
     - run: cargo test --features zlib
     - run: cargo test --features zlib --no-default-features
+    - run: cargo test --features zlib-default --no-default-features
     - run: cargo test --features zlib-ng-compat --no-default-features
       if: matrix.build != 'mingw'
     - run: cargo test --features zlib-ng --no-default-features
       if: matrix.build != 'mingw'
     - run: cargo test --features cloudflare_zlib --no-default-features
       if: matrix.build != 'mingw'
+    - run: |
+        if ! cargo check --no-default-features 2>&1 | grep "You need to choose"; then 
+          echo "expected message stating a zlib backend must be chosen"
+          exit 1
+        fi
+      if: matrix.build == 'stable' 
 
   rustfmt:
     name: Rustfmt
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v3
     - name: Install Rust
       run: rustup update stable && rustup default stable && rustup component add rustfmt
     - run: cargo fmt -- --check
@@ -61,7 +68,7 @@ jobs:
       matrix:
         target: [wasm32-unknown-unknown, wasm32-wasi]
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v3
     - name: Install Rust
       run: rustup update stable && rustup default stable && rustup target add ${{ matrix.target }}
     - run: cargo build --target ${{ matrix.target }}
