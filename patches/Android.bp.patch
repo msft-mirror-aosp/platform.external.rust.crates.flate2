@@ -1,15 +1,8 @@
 diff --git a/Android.bp b/Android.bp
-index 0c440d4..72a7bfe 100644
+index 01b3f6f..444f861 100644
 --- a/Android.bp
 +++ b/Android.bp
-@@ -34,21 +34,20 @@ license {
-         "SPDX-license-identifier-MIT",
-     ],
-     license_text: [
-         "LICENSE-APACHE",
-         "LICENSE-MIT",
-     ],
- }
+@@ -15,7 +15,6 @@ license {
  
  rust_test {
      name: "flate2_test_src_lib",
@@ -17,21 +10,7 @@ index 0c440d4..72a7bfe 100644
      crate_name: "flate2",
      cargo_env_compat: true,
      cargo_pkg_version: "1.0.28",
-     crate_root: "src/lib.rs",
-     test_suites: ["general-tests"],
-     auto_gen_config: true,
-     test_options: {
-         unit_test: true,
-     },
-     edition: "2018",
-@@ -61,21 +60,20 @@ rust_test {
-     rustlibs: [
-         "libcrc32fast",
-         "liblibz_sys",
-         "libquickcheck",
-         "librand",
-     ],
- }
+@@ -42,7 +41,6 @@ rust_test {
  
  rust_test {
      name: "flate2_test_tests_early-flush",
@@ -39,21 +18,7 @@ index 0c440d4..72a7bfe 100644
      crate_name: "early_flush",
      cargo_env_compat: true,
      cargo_pkg_version: "1.0.28",
-     crate_root: "tests/early-flush.rs",
-     test_suites: ["general-tests"],
-     auto_gen_config: true,
-     test_options: {
-         unit_test: true,
-     },
-     edition: "2018",
-@@ -89,21 +87,20 @@ rust_test {
-         "libcrc32fast",
-         "libflate2",
-         "liblibz_sys",
-         "libquickcheck",
-         "librand",
-     ],
- }
+@@ -70,7 +68,6 @@ rust_test {
  
  rust_test {
      name: "flate2_test_tests_empty-read",
@@ -61,21 +26,7 @@ index 0c440d4..72a7bfe 100644
      crate_name: "empty_read",
      cargo_env_compat: true,
      cargo_pkg_version: "1.0.28",
-     crate_root: "tests/empty-read.rs",
-     test_suites: ["general-tests"],
-     auto_gen_config: true,
-     test_options: {
-         unit_test: true,
-     },
-     edition: "2018",
-@@ -117,21 +114,20 @@ rust_test {
-         "libcrc32fast",
-         "libflate2",
-         "liblibz_sys",
-         "libquickcheck",
-         "librand",
-     ],
- }
+@@ -98,7 +95,6 @@ rust_test {
  
  rust_test {
      name: "flate2_test_tests_gunzip",
@@ -83,21 +34,7 @@ index 0c440d4..72a7bfe 100644
      crate_name: "gunzip",
      cargo_env_compat: true,
      cargo_pkg_version: "1.0.28",
-     crate_root: "tests/gunzip.rs",
-     test_suites: ["general-tests"],
-     auto_gen_config: true,
-     test_options: {
-         unit_test: true,
-     },
-     edition: "2018",
-@@ -152,21 +148,20 @@ rust_test {
-         "tests/corrupt-gz-file.bin",
-         "tests/good-file.gz",
-         "tests/good-file.txt",
-         "tests/multi.gz",
-         "tests/multi.txt",
-     ],
- }
+@@ -133,7 +129,6 @@ rust_test {
  
  rust_test {
      name: "flate2_test_tests_zero-write",
@@ -105,10 +42,3 @@ index 0c440d4..72a7bfe 100644
      crate_name: "zero_write",
      cargo_env_compat: true,
      cargo_pkg_version: "1.0.28",
-     crate_root: "tests/zero-write.rs",
-     test_suites: ["general-tests"],
-     auto_gen_config: true,
-     test_options: {
-         unit_test: true,
-     },
-     edition: "2018",
